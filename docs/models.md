@@ -1,7 +1,7 @@
 # Model environment setup and evaluation commands
 
 Run all commands from the repository root. Install Linux `ffmpeg` / `ffprobe` first
-(see the [README](../README.md#first-time-environment-setup)). Examples use Python 3.10 or newer and write
+(see the [README](../README.md#install-the-evaluation-environment)). Examples use Python 3.10 or newer and write
 predictions, scores and tables to `outputs/<model>/`.
 
 Each evaluation command runs all applicable tasks: T1–T4/T6/T7 (`table2`), T8 (`table3`),

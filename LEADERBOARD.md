@@ -1,8 +1,8 @@
 # Leaderboard
 
-Results for 12 model configurations on the reviewed public release: **1,479 interactions, 1,790 targets, and 1,112 video records**. Two media-invalid interactions remain excluded from scoring, leaving 1,477 interactions and 1,788 targets across the three evaluation splits.
+Results for 12 model configurations: **1,479 interactions, 1,790 targets, and 1,112 video records**. Two interactions with invalid media or timing are excluded from scoring, leaving 1,477 interactions and 1,788 targets across the three evaluation splits.
 
-Scores are reaggregated from archived predictions and per-interaction judgments on retained IDs, with unchanged reference content and timing. Affected confidence intervals in the public paper are also recomputed. This is not a fresh inference run on media edited for public distribution. [Machine-readable results](docs/public_results.json) record exact hit counts, denominators, and the annotation SHA-256. T5, T8-A, and T8-C retain their original populations.
+Scores use the original predictions and judgments for the remaining interactions; [full result counts](docs/public_results.json) are available by task.
 Use the [evaluation commands](docs/models.md) to measure a model on T1–T8.
 
 ## Table 2: explicit-request tasks (T1–T7)

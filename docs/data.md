@@ -4,12 +4,11 @@ The dataset has **one annotation file**, `annotations.json`, containing all 1,47
 interactions. An interaction is one record in its `interactions` list, with one or more
 reference `responses`. Evaluation splits select records from this shared annotation file.
 
-The default dataset root is `data/Omni-InteractScope/`. The evaluation code lives
-in this GitHub repository; the hosted dataset lives in the private
-[Hugging Face dataset repository](https://huggingface.co/datasets/Darden7/Omni-InteractScope)
-under that directory. Follow the [download instructions](../README.md#get-the-code-and-data)
-to obtain annotations, query attachments, ASR caches, verification manifests, and
-207 self-recorded videos. The 905 platform-sourced videos are not hosted; obtain
+The default dataset root is `data/Omni-InteractScope/`. Follow the
+[download instructions](../README.md#get-the-code-and-data) to obtain the
+[Hugging Face dataset](https://huggingface.co/datasets/Darden7/Omni-InteractScope):
+annotations, query attachments, ASR caches, verification manifests, and 207
+self-recorded videos. The 905 platform-sourced videos are not hosted; obtain
 them using the source links in `annotations.json`, as described below.
 
 ```text
@@ -110,7 +109,7 @@ Each record also carries that schema version. Essential fields are:
 | `query_type`, `query_text`, `query_time_ms` | Request modality, content and clip-relative query time |
 | `responses` | Reference answers with trigger times/windows, response types and trigger reasons |
 | `language`, `qa_language`, `target_group` | Scene language, query/answer language and assistance user context |
-| `source_attribution` | Public source information retained within the same record |
+| `source_attribution` | Source details for the video |
 | `source_attribution.source`, `source_attribution.original_video_url` | Source platform and link for obtaining the original video |
 | `source_start_ms`, `source_end_ms` | Evaluation clip boundaries in the source video, in milliseconds |
 

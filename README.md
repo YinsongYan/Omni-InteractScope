@@ -19,7 +19,7 @@
   <a href="LICENSE">Code License</a>
 </p>
 
-Omni-InteractScope evaluates multimodal interaction models across **1,479 interactions, 1,790 reference response targets, and eight task groups (T1–T8)**, measuring both response content and timing. This GitHub repository contains the evaluation code, model configurations, and documentation. The benchmark data remains in the separate, private [Hugging Face dataset repository](https://huggingface.co/datasets/Darden7/Omni-InteractScope).
+Omni-InteractScope evaluates multimodal interaction models across **1,479 interactions, 1,790 reference response targets, and eight task groups (T1–T8)**, measuring both response content and timing. Evaluation code and documentation are here; the [dataset](https://huggingface.co/datasets/Darden7/Omni-InteractScope) is on Hugging Face.
 
 ## Repository layout
 
@@ -54,15 +54,15 @@ Omni-InteractScope/
 | Component | Availability |
 |---|---|
 | Evaluation code, configurations, scripts, tests, and documentation | This GitHub repository |
-| Annotations, query attachments, ASR caches, and verification manifests | Private Hugging Face dataset, under `data/Omni-InteractScope/` |
-| 207 self-recorded videos | Private Hugging Face dataset; approximately 27.43 GB |
+| Annotations, query attachments, ASR caches, and verification manifests | Hugging Face dataset, under `data/Omni-InteractScope/` |
+| 207 self-recorded videos | Hugging Face dataset; approximately 27.43 GB |
 | 905 videos sourced from Douyin, Xiaohongshu, and Bilibili | Source links and reference metadata only; video files are not hosted |
 
 The hosted dataset occupies approximately **27.46 GB**. The complete reference video collection contains 1,112 videos and occupies approximately 151.3 GB. Full benchmark evaluation requires obtaining the 905 external videos separately; downloading the Hugging Face repository does not include those videos.
 
 ## Get the code and data
 
-Use Python 3.10 or later. Linux with `ffmpeg` and `ffprobe` is recommended for evaluation. Access to the private dataset requires an authorized Hugging Face account. The GitHub checkout contains no benchmark data.
+Use Python 3.10 or later. Linux with `ffmpeg` and `ffprobe` is recommended for evaluation. Sign in with a Hugging Face account that has access to the dataset. The GitHub checkout contains no benchmark data.
 
 ```bash
 git clone https://github.com/YinsongYan/Omni-InteractScope.git
