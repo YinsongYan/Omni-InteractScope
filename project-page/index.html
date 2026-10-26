@@ -56,7 +56,7 @@
 
     <section id="examples" aria-labelledby="examples-title">
       <h2 id="examples-title">Examples</h2>
-      <p>These are recordings and reference annotations from the benchmark. Each excerpt begins at 0:00, so the timestamps below match the video player.</p>
+      <p>These are recordings and reference annotations from the benchmark.</p>
       <div class="example-grid">
         <article class="example">
           <video controls playsinline preload="metadata" poster="assets/examples/park-chickens.jpg" aria-label="First-person park walkway recording with chickens ahead"><source src="assets/examples/park-chickens.mp4" type="video/mp4">Your browser does not support video.</video>
@@ -71,19 +71,343 @@
           <div class="example-copy"><h3>T8-C · Multi-step guidance</h3><p><strong>User:</strong> “I need to use a single-journey ticket to enter the metro station through the entry gate.” The assistant guides the user through the gate in three steps.</p><ol><li><strong>3.3 s</strong> · Walk toward the entry gates ahead.</li><li><strong>8.9 s</strong> · Scan the ticket on the reader to the right.</li><li><strong>11.9 s</strong> · After the successful scan, pass through the gate.</li></ol></div>
         </article>
       </div>
-      <p class="caption">Example videos are from the Omni-InteractScope dataset and have been encoded for web playback. Reference responses are translated or condensed for display.</p>
     </section>
 
     <section id="results" aria-labelledby="results-title">
       <h2 id="results-title">Results</h2>
-      <p>Evaluation requires both correct content and a response within the annotated window. The table shows selected results from each model group; see the <a href="https://github.com/YinsongYan/Omni-InteractScope/blob/main/LEADERBOARD.md">full leaderboard</a> for all models and tasks.</p>
-      <div class="table-wrap"><table><thead><tr><th scope="col">Model</th><th scope="col">Group</th><th scope="col">T1–T7 Avg. ↑</th><th scope="col">T8 overall ↑</th></tr></thead><tbody>
-        <tr><td>Gemini-3.5-Flash</td><td>Proprietary</td><td><strong>20.2</strong></td><td>41.11</td></tr>
-        <tr><td>Gemini-3.1-Pro</td><td>Proprietary</td><td>18.6</td><td><strong>46.39</strong></td></tr>
-        <tr><td>Qwen3-Omni</td><td>Open-source</td><td>6.7</td><td>13.06</td></tr>
-        <tr><td>MOSS-VL</td><td>Streaming</td><td>5.4</td><td>3.33</td></tr>
-      </tbody></table></div>
-      <p class="caption">T1–T7 Avg. is the mean of T1–T4, T6, and T7 joint content–timing accuracy (%); T5 has a separate temporal protocol. T8 overall is timely reference-target recall (%).</p>
+      <p>Results for all 12 model configurations across the eight task groups.</p>
+      <div class="results-block">
+        <h3>Evaluation on explicit-request tasks (T1–T7)</h3>
+        <p>Joint content–timing accuracy (%), higher is better. Avg. equally weights T1–T4, T6, and T7.</p>
+        <div class="table-wrap" role="region" aria-label="T1 to T7 results table" tabindex="0">
+<table class="leaderboard" aria-label="Evaluation on explicit-request tasks">
+  <thead>
+    <tr>
+      <th scope="col">Model</th>
+      <th scope="col">Size</th>
+      <th scope="col">Input</th>
+      <th scope="col">T1</th>
+      <th scope="col">T2</th>
+      <th scope="col">T3</th>
+      <th scope="col">T4</th>
+      <th scope="col">T5<sup>†</sup></th>
+      <th scope="col">T6</th>
+      <th scope="col">T7</th>
+      <th scope="col"><strong>Avg.</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="model-group"><th scope="rowgroup" colspan="11">Proprietary models</th></tr>
+    <tr>
+      <td>Gemini-3.1-Pro</td>
+      <td>N/R</td>
+      <td>V, A</td>
+      <td>22.5</td>
+      <td>28.2</td>
+      <td>11.6</td>
+      <td><strong>11.2</strong></td>
+      <td>N/A</td>
+      <td><strong>27.0</strong></td>
+      <td>11.2</td>
+      <td>18.6</td>
+    </tr>
+    <tr>
+      <td>Gemini-3.5-Flash</td>
+      <td>N/R</td>
+      <td>V, A</td>
+      <td>29.5</td>
+      <td><strong>31.6</strong></td>
+      <td><strong>14.0</strong></td>
+      <td>10.2</td>
+      <td>N/A</td>
+      <td>24.3</td>
+      <td><strong>11.4</strong></td>
+      <td><strong>20.2</strong></td>
+    </tr>
+    <tr>
+      <td>Qwen3.5-Omni-Plus</td>
+      <td>N/R</td>
+      <td>V, A</td>
+      <td><strong>32.0</strong></td>
+      <td>24.3</td>
+      <td>4.8</td>
+      <td>3.9</td>
+      <td>N/A</td>
+      <td>10.8</td>
+      <td>7.9</td>
+      <td>13.9</td>
+    </tr>
+    <tr class="model-group"><th scope="rowgroup" colspan="11">Open-source models</th></tr>
+    <tr>
+      <td>InternVL3.5</td>
+      <td>8B</td>
+      <td>V+ASR</td>
+      <td>29.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>N/A</td>
+      <td>5.4</td>
+      <td>0.4</td>
+      <td>6.0</td>
+    </tr>
+    <tr>
+      <td>Qwen3-VL</td>
+      <td>8B</td>
+      <td>V+ASR</td>
+      <td>19.5</td>
+      <td>4.9</td>
+      <td>0.5</td>
+      <td>0.0</td>
+      <td>N/A</td>
+      <td>2.7</td>
+      <td>3.1</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <td>Qwen2.5-Omni</td>
+      <td>7B</td>
+      <td>V, A</td>
+      <td>11.0</td>
+      <td>0.5</td>
+      <td>0.5</td>
+      <td>0.5</td>
+      <td>N/A</td>
+      <td>0.0</td>
+      <td>1.5</td>
+      <td>2.3</td>
+    </tr>
+    <tr>
+      <td>Qwen3-Omni</td>
+      <td>30B-A3B</td>
+      <td>V, A</td>
+      <td>26.5</td>
+      <td>2.9</td>
+      <td>1.4</td>
+      <td>1.0</td>
+      <td>N/A</td>
+      <td>2.7</td>
+      <td>5.7</td>
+      <td>6.7</td>
+    </tr>
+    <tr class="model-group"><th scope="rowgroup" colspan="11">Streaming Models</th></tr>
+    <tr>
+      <td>LiveCC</td>
+      <td>7B</td>
+      <td>V</td>
+      <td>0.0</td>
+      <td>1.5</td>
+      <td>0.5</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.7</td>
+      <td>0.4</td>
+    </tr>
+    <tr>
+      <td>AURA</td>
+      <td>8B</td>
+      <td>V</td>
+      <td>0.0</td>
+      <td>4.9</td>
+      <td>0.5</td>
+      <td>1.5</td>
+      <td>0.0</td>
+      <td>2.7</td>
+      <td>0.7</td>
+      <td>1.7</td>
+    </tr>
+    <tr>
+      <td>MMDuet2</td>
+      <td>3B</td>
+      <td>V</td>
+      <td>0.0</td>
+      <td>3.4</td>
+      <td>1.0</td>
+      <td>0.5</td>
+      <td>0.0</td>
+      <td>2.7</td>
+      <td>1.8</td>
+      <td>1.6</td>
+    </tr>
+    <tr>
+      <td>MOSS-VL</td>
+      <td>11.3B</td>
+      <td>V</td>
+      <td>1.5</td>
+      <td>9.2</td>
+      <td>1.9</td>
+      <td>5.8</td>
+      <td>0.9</td>
+      <td>8.1</td>
+      <td>5.9</td>
+      <td>5.4</td>
+    </tr>
+    <tr>
+      <td>MiniCPM-o 4.5</td>
+      <td>9B</td>
+      <td>V, A</td>
+      <td>1.5</td>
+      <td>8.3</td>
+      <td>1.4</td>
+      <td>1.0</td>
+      <td>1.7</td>
+      <td>2.7</td>
+      <td>1.1</td>
+      <td>2.7</td>
+    </tr>
+  </tbody>
+</table>
+        </div>
+        <p class="caption">† T5 uses a separate query-relative timing protocol and is excluded from Avg. N/A means no explicit elapsed-time clock.</p>
+      </div>
+      <div class="results-block">
+        <h3>Evaluation on assistance tasks (T8)</h3>
+        <p>Timely reference-target recall (%), higher is better. Overall pools 360 targets: 122 for T8-A, 151 for T8-B, and 87 for T8-C.</p>
+        <div class="table-wrap" role="region" aria-label="T8 results table" tabindex="0">
+<table class="leaderboard" aria-label="Evaluation on assistance tasks">
+  <thead>
+    <tr>
+      <th scope="col">Model</th>
+      <th scope="col">Size</th>
+      <th scope="col">Input</th>
+      <th scope="col"><strong>Overall</strong></th>
+      <th scope="col">T8-A</th>
+      <th scope="col">T8-B</th>
+      <th scope="col">T8-C</th>
+      <th scope="col">Complete T8-C</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="model-group"><th scope="rowgroup" colspan="8">Proprietary models</th></tr>
+    <tr>
+      <td>Gemini-3.1-Pro</td>
+      <td>N/R</td>
+      <td>V, A</td>
+      <td><strong>46.39</strong></td>
+      <td><strong>22.95</strong></td>
+      <td><strong>62.25</strong></td>
+      <td><strong>51.72</strong></td>
+      <td><strong>3/26</strong></td>
+    </tr>
+    <tr>
+      <td>Gemini-3.5-Flash</td>
+      <td>N/R</td>
+      <td>V, A</td>
+      <td>41.11</td>
+      <td>22.13</td>
+      <td>57.62</td>
+      <td>39.08</td>
+      <td>2/26</td>
+    </tr>
+    <tr>
+      <td>Qwen3.5-Omni-Plus</td>
+      <td>N/R</td>
+      <td>V, A</td>
+      <td>31.11</td>
+      <td>9.02</td>
+      <td>49.67</td>
+      <td>29.89</td>
+      <td>1/26</td>
+    </tr>
+    <tr class="model-group"><th scope="rowgroup" colspan="8">Open-source models</th></tr>
+    <tr>
+      <td>InternVL3.5</td>
+      <td>8B</td>
+      <td>V+ASR</td>
+      <td>14.17</td>
+      <td>0.00</td>
+      <td>26.49</td>
+      <td>12.64</td>
+      <td>0/26</td>
+    </tr>
+    <tr>
+      <td>Qwen3-VL</td>
+      <td>8B</td>
+      <td>V+ASR</td>
+      <td>15.00</td>
+      <td>2.46</td>
+      <td>24.50</td>
+      <td>16.09</td>
+      <td>0/26</td>
+    </tr>
+    <tr>
+      <td>Qwen2.5-Omni</td>
+      <td>7B</td>
+      <td>V, A</td>
+      <td>10.00</td>
+      <td>2.46</td>
+      <td>19.87</td>
+      <td>3.45</td>
+      <td>0/26</td>
+    </tr>
+    <tr>
+      <td>Qwen3-Omni</td>
+      <td>30B-A3B</td>
+      <td>V, A</td>
+      <td>13.06</td>
+      <td>2.46</td>
+      <td>25.83</td>
+      <td>5.75</td>
+      <td>0/26</td>
+    </tr>
+    <tr class="model-group"><th scope="rowgroup" colspan="8">Streaming Models</th></tr>
+    <tr>
+      <td>LiveCC</td>
+      <td>7B</td>
+      <td>V</td>
+      <td>3.61</td>
+      <td>0.00</td>
+      <td>8.61</td>
+      <td>0.00</td>
+      <td>0/26</td>
+    </tr>
+    <tr>
+      <td>AURA</td>
+      <td>8B</td>
+      <td>V</td>
+      <td>6.94</td>
+      <td>0.00</td>
+      <td>15.89</td>
+      <td>1.15</td>
+      <td>0/26</td>
+    </tr>
+    <tr>
+      <td>MMDuet2</td>
+      <td>3B</td>
+      <td>V</td>
+      <td>1.94</td>
+      <td>0.00</td>
+      <td>4.64</td>
+      <td>0.00</td>
+      <td>0/26</td>
+    </tr>
+    <tr>
+      <td>MOSS-VL</td>
+      <td>11.3B</td>
+      <td>V</td>
+      <td>3.33</td>
+      <td>0.00</td>
+      <td>7.28</td>
+      <td>1.15</td>
+      <td>0/26</td>
+    </tr>
+    <tr>
+      <td>MiniCPM-o 4.5</td>
+      <td>9B</td>
+      <td>V, A</td>
+      <td>3.06</td>
+      <td>0.00</td>
+      <td>7.28</td>
+      <td>0.00</td>
+      <td>0/26</td>
+    </tr>
+  </tbody>
+</table>
+        </div>
+        <p class="caption">Complete T8-C counts guidance interactions with every step covered, out of 26.</p>
+      </div>
+      <p class="caption">Input: V = video, A = native audio, ASR = scene transcripts. N/R = undisclosed model size; A3B = active parameters. The first seven models use independent prompted calls; streaming models use rolling evaluation. <a href="https://github.com/YinsongYan/Omni-InteractScope/blob/main/docs/protocol.md">Scoring protocol</a>.</p>
     </section>
 
     <footer><p>Omni-InteractScope · <a href="https://github.com/YinsongYan/Omni-InteractScope">Code</a> · <a href="https://huggingface.co/datasets/Darden7/Omni-InteractScope">Dataset</a></p></footer>
