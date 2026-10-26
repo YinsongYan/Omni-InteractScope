@@ -4,7 +4,7 @@
 
 <h1 align="center">Omni-InteractScope</h1>
 
-<p align="center"><strong>Benchmarking multimodal interaction in streaming video</strong></p>
+<p align="center"><strong>Benchmarking Proactive and Agentic Interaction in Continuous Omnimodal Streams</strong></p>
 
 <p align="center">
   <a href="https://huggingface.co/datasets/Darden7/Omni-InteractScope"><img alt="Dataset on Hugging Face" src="https://img.shields.io/badge/Dataset-Hugging%20Face-FFD21E?style=for-the-badge&amp;logo=huggingface&amp;logoColor=black"></a>
