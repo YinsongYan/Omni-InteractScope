@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/readme/omni-interactscope-mark.svg" alt="Omni-InteractScope logo: vision and sound connected by a live interaction loop" width="230">
+  <img src="assets/readme/omni-interactscope-mascot.png" alt="A capybara watches streaming video, listens, and responds in real time" width="400">
 </p>
 
 <h1 align="center">Omni-InteractScope</h1>
