@@ -61,7 +61,7 @@ hf download Darden7/Omni-InteractScope --repo-type dataset \
   --revision main --include 'data/**' --local-dir .
 ```
 
-Record the resolved Hugging Face commit for reproducibility. Replace `main` with a specific commit hash to download an immutable revision. Interrupted downloads can be resumed by running the same command again. Allow additional disk space for model weights and evaluation outputs.
+Record the resolved Hugging Face commit for reproducibility. The dataset revision used when these repositories were separated is `2b51db4ca2309757418a1ac4ffa61edb6dd47dba`; replace `main` with that full hash to download this immutable data release. Interrupted downloads can be resumed by running the same command again. Allow additional disk space for model weights and evaluation outputs.
 
 ## Install the evaluation environment
 
