@@ -34,8 +34,8 @@
 
     <section id="overview" aria-labelledby="overview-title">
       <h2 id="overview-title">Overview</h2>
-      <p>Omni-InteractScope studies assistants that observe a continuous video and audio stream and respond when something in the scene calls for it. The benchmark tests both <em>what</em> an assistant says or does and <em>when</em> it acts. Requests may depend on an event, a changing state, a temporal condition, or a sequence of steps; some assistance scenarios begin without an explicit request.</p>
-      <p>The benchmark contains <strong>1,479 interactions</strong> and <strong>1,790 annotated response targets</strong> across eight task groups. It draws on online video and first-person recordings from everyday activities. Each target specifies the expected response and its valid time window.</p>
+      <p>Omni-InteractScope evaluates assistants that follow continuous video and audio streams and respond at useful moments. Each interaction combines a stream with user context in text, speech, or images. Responses may be answers, alerts, warnings, tool calls, or successive guidance; the benchmark evaluates their content, timing, and coverage.</p>
+      <p>The benchmark contains <strong>1,479 interactions</strong> and <strong>1,790 response targets</strong> across eight task groups. T1–T7 use online videos spanning indoor, outdoor, and digital-screen scenes to test explicit requests. T8 uses self-recorded first-person videos for visual and hearing assistance, including reminders without an event-specific question, audiovisual questions, and multi-step guidance.</p>
       <div class="summary" aria-label="Dataset summary"><span><strong>8</strong> task groups</span><span><strong>1,479</strong> interactions</span><span><strong>1,790</strong> response targets</span><span><strong>12</strong> model configurations</span></div>
     </section>
 
@@ -63,8 +63,8 @@
           <div class="example-copy"><h3>T8-A · Query-free reminder</h3><p>A group of chickens moves onto the park walkway. Without waiting for an event-specific question, the assistant should warn the user before they reach the birds.</p><p class="annotation"><strong>26.8 s</strong> · “There are chickens on the path ahead. Slow down and walk around them.”</p></div>
         </article>
         <article class="example">
-          <video controls playsinline preload="metadata" poster="assets/examples/restaurant-road.jpg" aria-label="Street-side restaurant entrance with an electric scooter passing"><source src="assets/examples/restaurant-road.mp4" type="video/mp4">Your browser does not support video.</video>
-          <div class="example-copy"><h3>T8-B · Audiovisual question</h3><p><strong>User:</strong> “What is the place ahead? Are any vehicles passing by?” Earlier speech suggests a restaurant; the video shows its gateway and an electric scooter passing on the road.</p><p class="annotation"><strong>53.0 s</strong> · “A gateway to a local restaurant is ahead, and an electric scooter is passing by. Keep away from the roadside.”</p></div>
+          <video controls playsinline preload="metadata" poster="assets/examples/pet-shop-bird.jpg" aria-label="First-person pet shop recording showing several birds while chirping is heard"><source src="assets/examples/pet-shop-bird.mp4" type="video/mp4">Your browser does not support video.</video>
+          <div class="example-copy"><h3>T8-B · Audiovisual question</h3><p><strong>User:</strong> “Did this black-and-white bird chirp?” Bird calls are audible while several birds are visible, but the sound cannot be attributed to the bird in question.</p><p class="annotation"><strong>5.7 s</strong> · “I hear birds chirping, but the white bird with black spots is feeding, so I cannot tell whether it made the sound.”</p></div>
         </article>
         <article class="example example-wide">
           <video controls playsinline preload="metadata" poster="assets/examples/metro-gate.jpg" aria-label="First-person metro station recording showing a ticket scan at an entry gate"><source src="assets/examples/metro-gate.mp4" type="video/mp4">Your browser does not support video.</video>
