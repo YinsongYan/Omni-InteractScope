@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/readme/omni-interactscope-mark.svg" alt="Omni-InteractScope logo: video and audio waveform" width="112">
+  <img src="assets/readme/omni-interactscope-mark.svg" alt="Omni-InteractScope logo: a focus ring and audio waveform" width="112">
 </p>
 
 <h1 align="center">Omni-InteractScope</h1>
