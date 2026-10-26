@@ -1,6 +1,23 @@
-# Omni-InteractScope
+<p align="center">
+  <img src="assets/readme/omni-interactscope-mark.svg" alt="Omni-InteractScope logo: video and audio waveform" width="112">
+</p>
 
-[Dataset on Hugging Face](https://huggingface.co/datasets/Darden7/Omni-InteractScope) · [Data format](docs/data.md) · [Model setup](docs/models.md) · [Evaluation protocol](docs/protocol.md) · [Results](LEADERBOARD.md)
+<h1 align="center">Omni-InteractScope</h1>
+
+<p align="center"><strong>Benchmarking multimodal interaction in streaming video</strong></p>
+
+<p align="center">
+  <a href="https://huggingface.co/datasets/Darden7/Omni-InteractScope"><img alt="Dataset on Hugging Face" src="https://img.shields.io/badge/Dataset-Hugging%20Face-FFD21E?style=for-the-badge&amp;logo=huggingface&amp;logoColor=black"></a>
+  <a href="#get-the-code-and-data"><img alt="Get started" src="https://img.shields.io/badge/Quick%20Start-Get%20Started-25AFA8?style=for-the-badge"></a>
+  <a href="LEADERBOARD.md"><img alt="Leaderboard" src="https://img.shields.io/badge/Leaderboard-Results-7465D9?style=for-the-badge"></a>
+</p>
+
+<p align="center">
+  <a href="docs/data.md">Data Format</a> ·
+  <a href="docs/models.md">Model Setup</a> ·
+  <a href="docs/protocol.md">Evaluation Protocol</a> ·
+  <a href="LICENSE">Code License</a>
+</p>
 
 Omni-InteractScope evaluates multimodal interaction models across **1,479 interactions, 1,790 reference response targets, and eight task groups (T1–T8)**, measuring both response content and timing. This GitHub repository contains the evaluation code, model configurations, and documentation. The benchmark data remains in the separate, private [Hugging Face dataset repository](https://huggingface.co/datasets/Darden7/Omni-InteractScope).
 
@@ -61,8 +78,6 @@ hf download Darden7/Omni-InteractScope --repo-type dataset \
   --revision main --include 'data/**' --local-dir .
 ```
 
-Record the resolved Hugging Face commit for reproducibility. The dataset revision used when these repositories were separated is `2b51db4ca2309757418a1ac4ffa61edb6dd47dba`; replace `main` with that full hash to download this immutable data release. Interrupted downloads can be resumed by running the same command again. Allow additional disk space for model weights and evaluation outputs.
-
 ## Install the evaluation environment
 
 From the repository root, with the Python environment still activated:
@@ -85,14 +100,6 @@ The manifests describe the complete reference dataset, including the 905 externa
 omni-bench verify --dataset data/Omni-InteractScope
 omni-bench verify --dataset data/Omni-InteractScope --checksums
 ```
-
-Before the external videos are supplied, these full-dataset checks intentionally report missing files. To check the hashes of files that are already present, use GNU `sha256sum`:
-
-```bash
-(cd data/Omni-InteractScope && sha256sum --ignore-missing -c SHA256SUMS)
-```
-
-The last command verifies present files; it is not a completeness check. Newly downloaded or re-encoded source-platform clips may differ from the reference hashes. Use `--dataset /path/to/Omni-InteractScope` for evaluation against a dataset stored elsewhere.
 
 ## Evaluate a model
 
