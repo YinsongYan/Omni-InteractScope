@@ -7,6 +7,7 @@
 <p align="center"><strong>Benchmarking Proactive and Agentic Interaction in Continuous Omnimodal Streams</strong></p>
 
 <p align="center">
+  <a href="https://yinsongyan.github.io/Omni-InteractScope/"><img alt="Project page" src="https://img.shields.io/badge/Project-Page-225DB7?style=for-the-badge"></a>
   <a href="https://huggingface.co/datasets/Darden7/Omni-InteractScope"><img alt="Dataset on Hugging Face" src="https://img.shields.io/badge/Dataset-Hugging%20Face-FFD21E?style=for-the-badge&amp;logo=huggingface&amp;logoColor=black"></a>
   <a href="#get-the-code-and-data"><img alt="Get started" src="https://img.shields.io/badge/Quick%20Start-Get%20Started-25AFA8?style=for-the-badge"></a>
   <a href="LEADERBOARD.md"><img alt="Leaderboard" src="https://img.shields.io/badge/Leaderboard-Results-7465D9?style=for-the-badge"></a>
@@ -38,6 +39,7 @@ Omni-InteractScope/
   tests/                          # regression tests
   docs/                           # data, model, and protocol documentation
   LEADERBOARD.md                   # reference results
+  project-page/                   # GitHub Pages website
   data/                            # downloaded separately from Hugging Face; ignored by Git
     Omni-InteractScope/
       annotations.json             # all 1,479 interaction records
@@ -62,7 +64,7 @@ The hosted dataset occupies approximately **27.46 GB**. The complete reference v
 
 ## Get the code and data
 
-Use Python 3.10 or later. Linux with `ffmpeg` and `ffprobe` is recommended for evaluation. Sign in with a Hugging Face account that has access to the dataset. The GitHub checkout contains no benchmark data.
+Use Python 3.10 or later. Linux with `ffmpeg` and `ffprobe` is recommended for evaluation. The GitHub checkout contains no benchmark data.
 
 ```bash
 git clone https://github.com/YinsongYan/Omni-InteractScope.git
@@ -71,7 +73,6 @@ cd Omni-InteractScope
 python3 -m venv .venv-omni
 source .venv-omni/bin/activate
 python -m pip install --upgrade huggingface_hub
-hf auth login
 
 # Download only the hosted dataset into this code checkout.
 hf download Darden7/Omni-InteractScope --repo-type dataset \
