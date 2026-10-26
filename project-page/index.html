@@ -54,25 +54,6 @@
       </div>
     </section>
 
-    <section id="examples" aria-labelledby="examples-title">
-      <h2 id="examples-title">Examples</h2>
-      <p>These are recordings and reference annotations from the benchmark.</p>
-      <div class="example-grid">
-        <article class="example">
-          <video controls playsinline preload="metadata" poster="assets/examples/park-chickens.jpg" aria-label="First-person park walkway recording with chickens ahead"><source src="assets/examples/park-chickens.mp4" type="video/mp4">Your browser does not support video.</video>
-          <div class="example-copy"><h3>T8-A · Query-free reminder</h3><p>A group of chickens moves onto the park walkway. Without waiting for an event-specific question, the assistant should warn the user before they reach the birds.</p><p class="annotation"><strong>26.8 s</strong> · “There are chickens on the path ahead. Slow down and walk around them.”</p></div>
-        </article>
-        <article class="example">
-          <video controls playsinline preload="metadata" poster="assets/examples/pet-shop-bird.jpg" aria-label="First-person pet shop recording showing several birds while chirping is heard"><source src="assets/examples/pet-shop-bird.mp4" type="video/mp4">Your browser does not support video.</video>
-          <div class="example-copy"><h3>T8-B · Audiovisual question</h3><p><strong>User:</strong> “Did this black-and-white bird chirp?” Bird calls are audible while several birds are visible, but the sound cannot be attributed to the bird in question.</p><p class="annotation"><strong>5.7 s</strong> · “I hear birds chirping, but the white bird with black spots is feeding, so I cannot tell whether it made the sound.”</p></div>
-        </article>
-        <article class="example example-wide">
-          <video controls playsinline preload="metadata" poster="assets/examples/metro-gate.jpg" aria-label="First-person metro station recording showing a ticket scan at an entry gate"><source src="assets/examples/metro-gate.mp4" type="video/mp4">Your browser does not support video.</video>
-          <div class="example-copy"><h3>T8-C · Multi-step guidance</h3><p><strong>User:</strong> “I need to use a single-journey ticket to enter the metro station through the entry gate.” The assistant guides the user through the gate in three steps.</p><ol><li><strong>3.3 s</strong> · Walk toward the entry gates ahead.</li><li><strong>8.9 s</strong> · Scan the ticket on the reader to the right.</li><li><strong>11.9 s</strong> · After the successful scan, pass through the gate.</li></ol></div>
-        </article>
-      </div>
-    </section>
-
     <section id="results" aria-labelledby="results-title">
       <h2 id="results-title">Results</h2>
       <p>Results for all 12 model configurations across the eight task groups.</p>
@@ -408,6 +389,33 @@
         <p class="caption">Complete T8-C counts guidance interactions with every step covered, out of 26.</p>
       </div>
       <p class="caption">Input: V = video, A = native audio, ASR = scene transcripts. N/R = undisclosed model size; A3B = active parameters. The first seven models use independent prompted calls; streaming models use rolling evaluation. <a href="https://github.com/YinsongYan/Omni-InteractScope/blob/main/docs/protocol.md">Scoring protocol</a>.</p>
+    </section>
+
+    <section id="examples" aria-labelledby="examples-title">
+      <h2 id="examples-title">Examples</h2>
+      <div class="example-list">
+        <details class="example-item" name="example">
+          <summary><span>T8-A · Query-free reminder</span><span class="example-scene">Park walkway</span></summary>
+          <div class="example-content">
+            <video controls playsinline preload="none" poster="assets/examples/park-chickens.jpg" aria-label="First-person park walkway recording with chickens ahead"><source src="assets/examples/park-chickens.mp4" type="video/mp4">Your browser does not support video.</video>
+            <div class="example-copy"><p>A group of chickens moves onto the park walkway. Without waiting for an event-specific question, the assistant should warn the user before they reach the birds.</p><p class="annotation"><strong>26.8 s</strong> · “There are chickens on the path ahead. Slow down and walk around them.”</p></div>
+          </div>
+        </details>
+        <details class="example-item" name="example">
+          <summary><span>T8-B · Audiovisual question</span><span class="example-scene">Pet shop</span></summary>
+          <div class="example-content">
+            <video controls playsinline preload="none" poster="assets/examples/pet-shop-bird.jpg" aria-label="First-person pet shop recording showing several birds while chirping is heard"><source src="assets/examples/pet-shop-bird.mp4" type="video/mp4">Your browser does not support video.</video>
+            <div class="example-copy"><p><strong>User:</strong> “Did this black-and-white bird chirp?” Bird calls are audible while several birds are visible, but the sound cannot be attributed to the bird in question.</p><p class="annotation"><strong>5.7 s</strong> · “I hear birds chirping, but the white bird with black spots is feeding, so I cannot tell whether it made the sound.”</p></div>
+          </div>
+        </details>
+        <details class="example-item" name="example">
+          <summary><span>T8-C · Multi-step guidance</span><span class="example-scene">Metro gate</span></summary>
+          <div class="example-content">
+            <video controls playsinline preload="none" poster="assets/examples/metro-gate.jpg" aria-label="First-person metro station recording showing a ticket scan at an entry gate"><source src="assets/examples/metro-gate.mp4" type="video/mp4">Your browser does not support video.</video>
+            <div class="example-copy"><p><strong>User:</strong> “I need to use a single-journey ticket to enter the metro station through the entry gate.” The assistant guides the user through the gate in three steps.</p><ol><li><strong>3.3 s</strong> · Walk toward the entry gates ahead.</li><li><strong>8.9 s</strong> · Scan the ticket on the reader to the right.</li><li><strong>11.9 s</strong> · After the successful scan, pass through the gate.</li></ol></div>
+          </div>
+        </details>
+      </div>
     </section>
 
     <footer><p>Omni-InteractScope · <a href="https://github.com/YinsongYan/Omni-InteractScope">Code</a> · <a href="https://huggingface.co/datasets/Darden7/Omni-InteractScope">Dataset</a></p></footer>
