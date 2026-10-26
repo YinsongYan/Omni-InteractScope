@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/readme/omni-interactscope-mascot-v2.png" alt="A capybara watches successive video frames, hears audio, and responds" width="400">
+  <img src="assets/readme/omni-interactscope-mascot-v3.png" alt="A capybara watches a video stream, hears its audio, and responds to an event" width="400">
 </p>
 
 <h1 align="center">Omni-InteractScope</h1>
