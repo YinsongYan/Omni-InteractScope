@@ -25,7 +25,7 @@ Joint content–timing accuracy (%), higher is better. **Avg.** equally weights 
     </tr>
   </thead>
   <tbody>
-    <tr><th colspan="11" align="left">Hosted API models</th></tr>
+    <tr><th colspan="11" align="left">Proprietary models</th></tr>
     <tr>
       <td align="left">Gemini-3.1-Pro</td>
       <td align="center">N/R</td>
@@ -65,7 +65,7 @@ Joint content–timing accuracy (%), higher is better. **Avg.** equally weights 
       <td align="right">7.9</td>
       <td align="right">13.9</td>
     </tr>
-    <tr><th colspan="11" align="left">Local prompted models</th></tr>
+    <tr><th colspan="11" align="left">Open-source models</th></tr>
     <tr>
       <td align="left">InternVL3.5</td>
       <td align="center">8B</td>
@@ -118,7 +118,7 @@ Joint content–timing accuracy (%), higher is better. **Avg.** equally weights 
       <td align="right">5.7</td>
       <td align="right">6.7</td>
     </tr>
-    <tr><th colspan="11" align="left">Streaming models</th></tr>
+    <tr><th colspan="11" align="left">Streaming Models</th></tr>
     <tr>
       <td align="left">LiveCC</td>
       <td align="center">7B</td>
@@ -215,7 +215,7 @@ Complete T8-C counts fully covered guidance interactions out of 26.
     </tr>
   </thead>
   <tbody>
-    <tr><th colspan="8" align="left">Hosted API models</th></tr>
+    <tr><th colspan="8" align="left">Proprietary models</th></tr>
     <tr>
       <td align="left">Gemini-3.1-Pro</td>
       <td align="center">N/R</td>
@@ -246,7 +246,7 @@ Complete T8-C counts fully covered guidance interactions out of 26.
       <td align="right">29.89</td>
       <td align="right">1/26</td>
     </tr>
-    <tr><th colspan="8" align="left">Local prompted models</th></tr>
+    <tr><th colspan="8" align="left">Open-source models</th></tr>
     <tr>
       <td align="left">InternVL3.5</td>
       <td align="center">8B</td>
@@ -287,7 +287,7 @@ Complete T8-C counts fully covered guidance interactions out of 26.
       <td align="right">5.75</td>
       <td align="right">0/26</td>
     </tr>
-    <tr><th colspan="8" align="left">Streaming models</th></tr>
+    <tr><th colspan="8" align="left">Streaming Models</th></tr>
     <tr>
       <td align="left">LiveCC</td>
       <td align="center">7B</td>

@@ -1,34 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="12 33 296 134" role="img" aria-labelledby="title desc">
   <title id="title">Omni-InteractScope</title>
-  <desc id="desc">A focus ring surrounding a colorful audio waveform</desc>
+  <desc id="desc">A continuous interaction loop connects vision, sound, and a live response pulse</desc>
   <defs>
-    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#38D9C8"/>
-      <stop offset=".5" stop-color="#5FA8F5"/>
-      <stop offset="1" stop-color="#AF7CF4"/>
+    <linearGradient id="vision" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4778E6"/>
+      <stop offset="1" stop-color="#7358DA"/>
     </linearGradient>
-    <linearGradient id="bars" x1="0" y1="1" x2="1" y2="0">
-      <stop offset="0" stop-color="#46E0D2"/>
-      <stop offset="1" stop-color="#C19AFF"/>
+    <linearGradient id="sound" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#27C9BA"/>
+      <stop offset="1" stop-color="#2998D8"/>
     </linearGradient>
-    <radialGradient id="face" cx=".35" cy=".25" r=".9">
-      <stop offset="0" stop-color="#223858"/>
-      <stop offset="1" stop-color="#10162B"/>
-    </radialGradient>
   </defs>
-  <circle cx="120" cy="120" r="99" fill="none" stroke="url(#ring)" stroke-opacity=".28" stroke-width="2"/>
-  <circle cx="120" cy="120" r="87" fill="url(#face)" stroke="url(#ring)" stroke-width="9"/>
-  <circle cx="120" cy="120" r="70" fill="none" stroke="#D8E8FF" stroke-opacity=".12" stroke-width="1.5"/>
-  <path d="M36 55A107 107 0 0 1 82 18" fill="none" stroke="#45DCCE" stroke-width="6" stroke-linecap="round"/>
-  <path d="M204 185A107 107 0 0 1 158 222" fill="none" stroke="#AC83F1" stroke-width="6" stroke-linecap="round"/>
-  <circle cx="82" cy="18" r="5" fill="#45DCCE"/>
-  <circle cx="158" cy="222" r="5" fill="#AC83F1"/>
-  <g fill="url(#bars)">
-    <rect x="69" y="107" width="11" height="26" rx="5.5"/>
-    <rect x="87" y="92" width="11" height="56" rx="5.5"/>
-    <rect x="105" y="75" width="11" height="90" rx="5.5"/>
-    <rect x="123" y="93" width="11" height="54" rx="5.5"/>
-    <rect x="141" y="84" width="11" height="72" rx="5.5"/>
-    <rect x="159" y="106" width="11" height="28" rx="5.5"/>
-  </g>
+  <path d="M159 100C136 76 109 47 80 47C51 47 29 70 29 100C29 130 51 153 80 153C109 153 136 124 159 100Z" fill="none" stroke="url(#vision)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M161 100C184 76 211 47 240 47C269 47 291 70 291 100C291 130 269 153 240 153C211 153 184 124 161 100Z" fill="none" stroke="url(#sound)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M52 100C61 88 72 81 81 81C92 81 103 88 111 100C103 112 92 119 81 119C70 119 60 112 52 100Z" fill="#EAF2FF" stroke="#4668CB" stroke-width="4" stroke-linejoin="round"/>
+  <circle cx="81" cy="100" r="13" fill="#475FC5"/>
+  <circle cx="81" cy="100" r="5" fill="#B4F4E8"/>
+  <path d="M206 100H216L223 89L233 112L244 78L255 106L262 99H270" fill="none" stroke="#2D8FC3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M160 82L165 95L178 100L165 105L160 118L155 105L142 100L155 95Z" fill="#FF9368"/>
 </svg>
