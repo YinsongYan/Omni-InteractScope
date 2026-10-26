@@ -8,7 +8,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Omni-InteractScope">
   <meta property="og:description" content="Benchmarking Proactive and Agentic Interaction in Continuous Omnimodal Streams">
-  <meta property="og:image" content="https://raw.githubusercontent.com/YinsongYan/Omni-InteractScope/main/project-page/assets/examples/elevator.jpg">
+  <meta property="og:image" content="https://raw.githubusercontent.com/YinsongYan/Omni-InteractScope/main/project-page/assets/examples/metro-gate.jpg">
   <title>Omni-InteractScope</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
@@ -56,22 +56,22 @@
 
     <section id="examples" aria-labelledby="examples-title">
       <h2 id="examples-title">Examples</h2>
-      <p>These are recordings and reference annotations from the benchmark. Play each video to see the event in context. The timestamps below refer to the full video.</p>
+      <p>These are recordings and reference annotations from the benchmark. Each excerpt begins at 0:00, so the timestamps below match the video player.</p>
       <div class="example-grid">
         <article class="example">
-          <video controls playsinline preload="metadata" poster="assets/examples/store.jpg" aria-label="Convenience store recording with an audible greeting"><source src="assets/examples/store.mp4" type="video/mp4">Your browser does not support video.</video>
-          <div class="example-copy"><h3>T8-A · Query-free reminder</h3><p>In a convenience store, a welcome announcement begins. The assistant should tell a user with hearing impairment that the greeting was heard.</p><p class="annotation"><strong>26.2 s</strong> · “A store greeting sounds ahead of you: ‘Welcome.’”</p></div>
+          <video controls playsinline preload="metadata" poster="assets/examples/park-chickens.jpg" aria-label="First-person park walkway recording with chickens ahead"><source src="assets/examples/park-chickens.mp4" type="video/mp4">Your browser does not support video.</video>
+          <div class="example-copy"><h3>T8-A · Query-free reminder</h3><p>A group of chickens moves onto the park walkway. Without waiting for a question, the assistant should warn the user before they reach the birds.</p><p class="annotation"><strong>26.8 s</strong> · “There are chickens on the path ahead. Slow down and walk around them.”</p></div>
         </article>
         <article class="example">
-          <video controls playsinline preload="metadata" poster="assets/examples/pets.jpg" aria-label="Pet shop recording with chicks chirping"><source src="assets/examples/pets.mp4" type="video/mp4">Your browser does not support video.</video>
-          <div class="example-copy"><h3>T8-B · Audiovisual question</h3><p><strong>User:</strong> “Are the chicks in front of me making any sounds?” The answer depends on both the visible chicks and the scene audio.</p><p class="annotation"><strong>15.0 s</strong> · “The chicks are making chirping sounds.”</p></div>
+          <video controls playsinline preload="metadata" poster="assets/examples/arcade-token-machine.jpg" aria-label="Arcade recording showing a game token exchange machine"><source src="assets/examples/arcade-token-machine.mp4" type="video/mp4">Your browser does not support video.</video>
+          <div class="example-copy"><h3>T8-B · Audiovisual question</h3><p><strong>User:</strong> “What is this machine in front of me?” The answer identifies the machine and explains its visible controls.</p><p class="annotation"><strong>49.9 s</strong> · “It is a game token exchange machine. The touchscreen is above and the token dispenser is below.”</p></div>
         </article>
         <article class="example example-wide">
-          <video controls playsinline preload="metadata" poster="assets/examples/elevator.jpg" aria-label="First-person elevator ride with three guidance targets"><source src="assets/examples/elevator.mp4" type="video/mp4">Your browser does not support video.</video>
-          <div class="example-copy"><h3>T8-C · Multi-step guidance</h3><p><strong>User:</strong> “Help me take the elevator to floor 7, and remind me to get out when we arrive.” The assistant must respond at three different moments.</p><ol><li><strong>32.0 s</strong> · Point out the floor 7 button.</li><li><strong>58.0 s</strong> · Prepare the user to leave as floor 7 approaches.</li><li><strong>63.5 s</strong> · Tell the user that the doors are open and guide them out.</li></ol></div>
+          <video controls playsinline preload="metadata" poster="assets/examples/metro-gate.jpg" aria-label="First-person metro station recording showing a ticket scan at an entry gate"><source src="assets/examples/metro-gate.mp4" type="video/mp4">Your browser does not support video.</video>
+          <div class="example-copy"><h3>T8-C · Multi-step guidance</h3><p><strong>User:</strong> “I need to use a single-journey ticket to enter the metro station through the entry gate.” The assistant guides the user through the gate in three steps.</p><ol><li><strong>3.3 s</strong> · Walk toward the entry gates ahead.</li><li><strong>8.9 s</strong> · Scan the ticket on the reader to the right.</li><li><strong>11.9 s</strong> · After the successful scan, pass through the gate.</li></ol></div>
         </article>
       </div>
-      <p class="caption">Example videos are from the Omni-InteractScope dataset and have been encoded for web playback. Reference responses are condensed for display.</p>
+      <p class="caption">Example videos are from the Omni-InteractScope dataset and have been encoded for web playback. Reference responses are translated or condensed for display.</p>
     </section>
 
     <section id="results" aria-labelledby="results-title">
