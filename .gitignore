@@ -1,0 +1,28 @@
+# Benchmark data is distributed from the Hugging Face dataset repository.
+/data/
+
+# Local credentials and evaluation artifacts.
+.env
+.env.*
+!.env.example
+/.cache/
+/outputs/
+/video_sources.tsv
+
+# Python development files.
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+.venv-*/
+venv/
+build/
+dist/
+
+# Local editor and OS files.
+.DS_Store
+.idea/
+.vscode/

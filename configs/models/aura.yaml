@@ -1,0 +1,9 @@
+model: aura
+input: v
+model_args:
+  base_url: http://127.0.0.1:8028/v1
+  served_model: AURA
+  max_segments: 30
+  max_tokens: 512
+  max_pixels: 151200
+  revision: 88ee550629fcb4d84428cdbfb346d07f01ea6e03

@@ -1,0 +1,172 @@
+overrides:
+  proactive_notifying:
+    judge_rubric: event
+  verbal_visual_interjection:
+    judge_rubric: event
+  visual_hints:
+    judge_rubric: event
+  proactive_agent_assistance:
+    judge_rubric: event
+  simultaneous_speech:
+    judge_rubric: event
+  state_dependent:
+    judge_rubric: general
+  time_awareness:
+    judge_rubric: general
+  seamless_dialog_management:
+    judge_rubric: general
+  simultaneous_tool_calls_search_ui:
+    content_scorer: tool_name
+  simultaneous_tool_calls_search_generative_ui:
+    content_scorer: tool_name
+paper_classes:
+  T1:
+    name: Proactive Tool Invocation
+    predicate: the external information the request needs, and its retrieval key,
+      are identifiable now
+    capability: knowledge-boundary recognition + retrieval-modality routing
+    members:
+    - simultaneous_tool_calls_search_ui
+    - simultaneous_tool_calls_search_generative_ui
+    sampling_stratum: class
+    leaves:
+    - name: vision-keyed retrieval
+      rule:
+        tool_modality: vision
+    - name: text-keyed retrieval
+      rule:
+        tool_modality: text
+    - name: audio-keyed retrieval
+      rule:
+        tool_modality: audio
+    - name: device action
+      rule:
+        tool_modality: action
+  T2:
+    name: Event Notification
+    predicate: a discrete event starts, changes or completes
+    capability: event-boundary detection (onset / change / completion)
+    members:
+    - proactive_notifying
+    - visual_hints/BF
+    leaves:
+    - name: agent-action onset
+      rule:
+        cells:
+        - proactive_notifying/A
+        - visual_hints/B
+    - name: object-state change
+      rule:
+        cells:
+        - visual_hints/F
+    - name: process completion
+      rule:
+        cells:
+        - proactive_notifying/C
+        - proactive_notifying/H
+    - name: entity appearance
+      rule:
+        cells:
+        - proactive_notifying/B
+    - name: audio / screen cue
+      rule:
+        cells:
+        - proactive_notifying/F
+        - proactive_notifying/G
+    - name: spatial & anomaly
+      rule:
+        cells:
+        - proactive_notifying/D
+        - proactive_notifying/E
+  T3:
+    name: Risk and Error Interjection
+    predicate: something unsafe or wrong is happening and warrants an interruption
+    capability: normative judgement, not merely detection
+    members:
+    - verbal_visual_interjection
+    leaves:
+    - name: unsafe / incorrect action
+      rule:
+        cells:
+        - verbal_visual_interjection/B
+    - name: spoken-claim correction
+      rule:
+        cells:
+        - verbal_visual_interjection/A
+  T4:
+    name: Cumulative-State Tracking
+    predicate: a quantity accumulated across frames reaches a threshold
+    capability: long-horizon memory + counting / re-identification
+    members:
+    - state_dependent
+    leaves:
+    - name: quantity counting
+      rule:
+        cells:
+        - state_dependent/A
+        - state_dependent/C
+    - name: re-identification
+      rule:
+        cells:
+        - state_dependent/B
+    - name: composite condition
+      rule:
+        cells:
+        - state_dependent/D
+        - state_dependent/E
+  T5:
+    name: Temporal Conditioned Trigger
+    predicate: a time condition is satisfied
+    capability: timekeeping — the model's own clock vs. a clock visible in the frame
+    members:
+    - time_awareness
+    leaves:
+    - name: user-set duration / timer
+      rule:
+        cells:
+        - time_awareness/A
+        - time_awareness/B
+        - time_awareness/C
+    - name: on-screen clock
+      rule:
+        cells:
+        - time_awareness/D
+  T6:
+    name: Nonverbal and Workflow Cue
+    predicate: the user's own state — a bodily signal, or being stuck in a workflow
+      — calls for help
+    capability: intent inference from something other than an explicit request
+    members:
+    - visual_hints/ACDE
+    - proactive_agent_assistance
+    leaves:
+    - name: nonverbal user cue
+      rule:
+        cells:
+        - visual_hints/A
+        - visual_hints/C
+        - visual_hints/D
+        - visual_hints/E
+    - name: workflow assistance
+      rule:
+        cells:
+        - proactive_agent_assistance/A
+        - proactive_agent_assistance/B
+        - proactive_agent_assistance/C
+        - proactive_agent_assistance/D
+        - proactive_agent_assistance/E
+  T7:
+    name: Continuous Responses
+    predicate: the stream keeps running under one standing request and the assistant
+      has to keep speaking in step with it
+    capability: full-duplex output scheduling — self-segmenting a live stream into
+      an ordered onset sequence (the one class a turn-based model cannot do by construction)
+    members:
+    - simultaneous_speech
+    leaves:
+    - name: simultaneous interpretation
+      rule:
+        crosslingual: true
+    - name: live narration
+      rule:
+        crosslingual: false

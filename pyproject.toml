@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "omni-interactscope-eval"
+version = "0.1.1"
+description = "Causal multimodal interaction benchmark evaluation"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.23", "pyyaml>=6.0"]
+
+[project.optional-dependencies]
+media = ["decord==0.6.0", "pillow>=9.0", "av>=12"]
+judge = ["openai>=1.30"]
+download = ["huggingface-hub>=0.24"]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+omni-bench = "omni_eval.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["omni_eval*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.setuptools.data-files]
+"share/omni-interactscope/configs" = ["configs/*.yaml"]
+"share/omni-interactscope/configs/models" = ["configs/models/*.yaml"]

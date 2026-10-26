@@ -1,0 +1,9 @@
+model: internvl3.5-8b
+input: v+asr
+model_args:
+  model_path: OpenGVLab/InternVL3_5-8B
+  input_size: 448
+  max_frames: 32
+  stride_sec: 2.0
+  recent_window_sec: 8.0
+  max_new_tokens: 512

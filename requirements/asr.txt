@@ -1,0 +1,4 @@
+transformers>=5.15
+accelerate
+soundfile
+librosa

@@ -1,0 +1,11 @@
+model: openai-compatible
+input: v
+model_args:
+  api_model: ${BENCH_MODEL}
+  api_base: ${BENCH_BASE_URL}
+  api_key_env: BENCH_API_KEY
+  max_frames: 32
+  max_pixels: 151200
+  jpeg_quality: 85
+  temperature: 0.0
+  max_output_tokens: 4096

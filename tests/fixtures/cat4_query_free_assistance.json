@@ -1,0 +1,54 @@
+[
+  {
+    "interaction_id": "c4_workflow_correction_01",
+    "task_type": "query_free_proactive_assistance",
+    "sub_task_type": "workflow_error_correction",
+    "query_type": "text",
+    "query_time": 0,
+    "query_text": "",
+    "query_image": "",
+    "query_audio": "",
+    "video": "demo_c4_01.mp4",
+    "responses": [
+      {
+        "response_id": 1,
+        "notify_trigger_time": 11000,
+        "valid_response_window": null,
+        "trigger_type": "vision",
+        "trigger_reason": "User skips a step they completed earlier, contradicting the recipe.",
+        "response_type": "text",
+        "assistant_reply_text": "You already added the salt earlier — no need to add it again.",
+        "long_memory": "yes",
+        "long_memory_start": 2000,
+        "source_language": "",
+        "target_language": ""
+      }
+    ]
+  },
+  {
+    "interaction_id": "c4_accessibility_reminder_01",
+    "task_type": "query_free_proactive_assistance",
+    "sub_task_type": "accessibility_audio_visual_guidance",
+    "query_type": "text",
+    "query_time": 0,
+    "query_text": "",
+    "query_image": "",
+    "query_audio": "",
+    "video": "demo_c4_02.mp4",
+    "responses": [
+      {
+        "response_id": 1,
+        "notify_trigger_time": 9000,
+        "valid_response_window": null,
+        "trigger_type": "vision_audio",
+        "trigger_reason": "A kettle whistles and steam rises while the user faces away.",
+        "response_type": "text",
+        "assistant_reply_text": "The kettle behind you is boiling — you may want to turn off the stove.",
+        "long_memory": "no",
+        "long_memory_start": null,
+        "source_language": "",
+        "target_language": ""
+      }
+    ]
+  }
+]

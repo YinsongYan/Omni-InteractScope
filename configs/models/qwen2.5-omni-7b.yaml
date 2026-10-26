@@ -1,0 +1,11 @@
+model: qwen2.5-omni-7b
+input: va
+model_args:
+  model_path: Qwen/Qwen2.5-Omni-7B
+  fps: 1.0
+  max_pixels: 151200
+  max_frames: 32
+  stride_sec: 2.0
+  recent_window_sec: 8.0
+  max_new_tokens: 1024
+  use_audio: true

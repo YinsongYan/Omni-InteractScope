@@ -1,0 +1,95 @@
+version: 1
+axis: retrieval_input_modality
+tools:
+  web_search:
+    in_gt: true
+    modality: text
+    args:
+    - query
+    lenient_alt: []
+    desc: Search the web for a text query. Use when the thing to look up is named
+      in words.
+  image_search:
+    in_gt: true
+    modality: vision
+    args:
+    - frame_ref
+    - query
+    lenient_alt:
+    - web_search
+    desc: Search by image. Use when what to look up is something visible in the current
+      frame that the user only points at ('this brand', 'what species is it').
+  audio_search:
+    in_gt: true
+    modality: audio
+    args:
+    - audio_ref
+    - query
+    lenient_alt:
+    - web_search
+    desc: Identify or look up something heard in the audio stream — a song, a melody,
+      a sound.
+  place_search:
+    in_gt: false
+    modality: place
+    args:
+    - place_ref
+    - query
+    lenient_alt:
+    - web_search
+    desc: Look up a geographic place or point of interest — where something is, what
+      is nearby.
+  navigation_tool:
+    in_gt: true
+    modality: action
+    args:
+    - destination
+    lenient_alt: []
+    desc: 'Start turn-by-turn navigation. An action, not a retrieval: it returns no
+      answer text.'
+  weather_fetch:
+    in_gt: false
+    modality: text
+    args:
+    - location
+    - when
+    lenient_alt: []
+    desc: Fetch a weather forecast for a location and time.
+  translate:
+    in_gt: false
+    modality: text
+    args:
+    - text
+    - target_language
+    lenient_alt: []
+    desc: Translate a piece of text into another language.
+  currency_convert:
+    in_gt: false
+    modality: text
+    args:
+    - amount
+    - from_currency
+    - to_currency
+    lenient_alt: []
+    desc: Convert an amount between currencies at the current rate.
+  contacts_lookup:
+    in_gt: false
+    modality: text
+    args:
+    - name
+    lenient_alt: []
+    desc: Look up a person in the user's contacts.
+  flight_status:
+    in_gt: false
+    modality: text
+    args:
+    - flight_no
+    - date
+    lenient_alt: []
+    desc: Check the live status of a flight.
+retired:
+  web_fetch: Fetch one URL. 2 occurrences in the pool, 0 in bench1200; a model would
+    reasonably use it as a web_search substitute, which would be penalised for the
+    wrong reason.
+  taobao_search: Annotator drift (淘宝_search), 1 occurrence in the pool, 0 in bench1200.
+  taobao_tool: Annotator drift (淘宝工具), 1 occurrence in the pool, 0 in bench1200.

@@ -1,0 +1,1099 @@
+{
+  "reference_version": "reviewed-public-1479-v1",
+  "source_commit": "6b347f9a2487768f0a026c81b03853bfd71c425c",
+  "annotation_sha256": "386514da4031d6baf7a017d4b696b02c24ce8c1e5a068296bcf810ba34da36fc",
+  "interactions": 1479,
+  "targets": 1790,
+  "video_records": 1112,
+  "evaluation_interactions": 1477,
+  "evaluation_targets": 1788,
+  "method": "Reaggregated archived predictions and per-interaction verdicts on retained interaction IDs. No new inference. Retained scoring fields match the archived annotation release.",
+  "new_model_calls": 0,
+  "new_judge_calls": 0,
+  "results": [
+    {
+      "split": "table2",
+      "model": "gemini-3.1-pro",
+      "input": "va",
+      "overall": {
+        "interactions": 1063,
+        "targets": 1313,
+        "hits": 211,
+        "percentage": 16.07006854531607
+      },
+      "by_task": {
+        "T1": {
+          "interactions": 200,
+          "targets": 200,
+          "hits": 45,
+          "percentage": 22.5
+        },
+        "T2": {
+          "interactions": 206,
+          "targets": 206,
+          "hits": 58,
+          "percentage": 28.155339805825243
+        },
+        "T3": {
+          "interactions": 207,
+          "targets": 207,
+          "hits": 24,
+          "percentage": 11.594202898550725
+        },
+        "T4": {
+          "interactions": 206,
+          "targets": 206,
+          "hits": 23,
+          "percentage": 11.16504854368932
+        },
+        "T6": {
+          "interactions": 37,
+          "targets": 37,
+          "hits": 10,
+          "percentage": 27.027027027027028
+        },
+        "T7": {
+          "interactions": 207,
+          "targets": 457,
+          "hits": 51,
+          "percentage": 11.159737417943107
+        }
+      },
+      "terminal_failures": 2,
+      "macro_pct": 18.60022594883924
+    },
+    {
+      "split": "table2",
+      "model": "gemini-3.5-flash",
+      "input": "va",
+      "overall": {
+        "interactions": 1063,
+        "targets": 1313,
+        "hits": 235,
+        "percentage": 17.897943640517898
+      },
+      "by_task": {
+        "T1": {
+          "interactions": 200,
+          "targets": 200,
+          "hits": 59,
+          "percentage": 29.5
+        },
+        "T2": {
+          "interactions": 206,
+          "targets": 206,
+          "hits": 65,
+          "percentage": 31.553398058252426
+        },
+        "T3": {
+          "interactions": 207,
+          "targets": 207,
+          "hits": 29,
+          "percentage": 14.009661835748792
+        },
+        "T4": {
+          "interactions": 206,
+          "targets": 206,
+          "hits": 21,
+          "percentage": 10.194174757281553
+        },
+        "T6": {
+          "interactions": 37,
+          "targets": 37,
+          "hits": 9,
+          "percentage": 24.324324324324323
+        },
+        "T7": {
+          "interactions": 207,
+          "targets": 457,
+          "hits": 52,
+          "percentage": 11.37855579868709
+        }
+      },
+      "terminal_failures": 2,
+      "macro_pct": 20.16001912904903
+    },
+    {
+      "split": "table2",
+      "model": "qwen3.5-omni-plus",
+      "input": "va",
+      "overall": {
+        "interactions": 1063,
+        "targets": 1313,
+        "hits": 172,
+        "percentage": 13.0997715156131
+      },
+      "by_task": {
+        "T1": {
+          "interactions": 200,
+          "targets": 200,
+          "hits": 64,
+          "percentage": 32.0
+        },
+        "T2": {
+          "interactions": 206,
+          "targets": 206,
+          "hits": 50,
+          "percentage": 24.271844660194176
+        },
+        "T3": {
+          "interactions": 207,
+          "targets": 207,
+          "hits": 10,
+          "percentage": 4.830917874396135
+        },
+        "T4": {
+          "interactions": 206,
+          "targets": 206,
+          "hits": 8,
+          "percentage": 3.883495145631068
+        },
+        "T6": {
+          "interactions": 37,
+          "targets": 37,
+          "hits": 4,
+          "percentage": 10.81081081081081
+        },
+        "T7": {
+          "interactions": 207,
+          "targets": 457,
+          "hits": 36,
+          "percentage": 7.87746170678337
+        }
+      },
+      "terminal_failures": 0,
+      "macro_pct": 13.94575503296926
+    },
+    {
+      "split": "table2",
+      "model": "qwen3-omni-30b-a3b",
+      "input": "va",
+      "overall": {
+        "interactions": 1063,
+        "targets": 1313,
+        "hits": 91,
+        "percentage": 6.930693069306931
+      },
+      "by_task": {
+        "T1": {
+          "interactions": 200,
+          "targets": 200,
+          "hits": 53,
+          "percentage": 26.5
+        },
+        "T2": {
+          "interactions": 206,
+          "targets": 206,
+          "hits": 6,
+          "percentage": 2.912621359223301
+        },
+        "T3": {
+          "interactions": 207,
+          "targets": 207,
+          "hits": 3,
+          "percentage": 1.4492753623188406
+        },
+        "T4": {
+          "interactions": 206,
+          "targets": 206,
+          "hits": 2,
+          "percentage": 0.970873786407767
+        },
+        "T6": {
+          "interactions": 37,
+          "targets": 37,
+          "hits": 1,
+          "percentage": 2.7027027027027026
+        },
+        "T7": {
+          "interactions": 207,
+          "targets": 457,
+          "hits": 26,
+          "percentage": 5.689277899343545
+        }
+      },
+      "terminal_failures": 0,
+      "macro_pct": 6.704125184999359
+    },
+    {
+      "split": "table2",
+      "model": "qwen2.5-omni-7b",
+      "input": "va",
+      "overall": {
+        "interactions": 1063,
+        "targets": 1313,
+        "hits": 32,
+        "percentage": 2.437166793602437
+      },
+      "by_task": {
+        "T1": {
+          "interactions": 200,
+          "targets": 200,
+          "hits": 22,
+          "percentage": 11.0
+        },
+        "T2": {
+          "interactions": 206,
+          "targets": 206,
+          "hits": 1,
+          "percentage": 0.4854368932038835
+        },
+        "T3": {
+          "interactions": 207,
+          "targets": 207,
+          "hits": 1,
+          "percentage": 0.4830917874396135
+        },
+        "T4": {
+          "interactions": 206,
+          "targets": 206,
+          "hits": 1,
+          "percentage": 0.4854368932038835
+        },
+        "T6": {
+          "interactions": 37,
+          "targets": 37,
+          "hits": 0,
+          "percentage": 0.0
+        },
+        "T7": {
+          "interactions": 207,
+          "targets": 457,
+          "hits": 7,
+          "percentage": 1.5317286652078774
+        }
+      },
+      "terminal_failures": 0,
+      "macro_pct": 2.330949039842543
+    },
+    {
+      "split": "table2",
+      "model": "qwen3-vl-8b",
+      "input": "v+asr",
+      "overall": {
+        "interactions": 1063,
+        "targets": 1313,
+        "hits": 65,
+        "percentage": 4.9504950495049505
+      },
+      "by_task": {
+        "T1": {
+          "interactions": 200,
+          "targets": 200,
+          "hits": 39,
+          "percentage": 19.5
+        },
+        "T2": {
+          "interactions": 206,
+          "targets": 206,
+          "hits": 10,
+          "percentage": 4.854368932038835
+        },
+        "T3": {
+          "interactions": 207,
+          "targets": 207,
+          "hits": 1,
+          "percentage": 0.4830917874396135
+        },
+        "T4": {
+          "interactions": 206,
+          "targets": 206,
+          "hits": 0,
+          "percentage": 0.0
+        },
+        "T6": {
+          "interactions": 37,
+          "targets": 37,
+          "hits": 1,
+          "percentage": 2.7027027027027026
+        },
+        "T7": {
+          "interactions": 207,
+          "targets": 457,
+          "hits": 14,
+          "percentage": 3.063457330415755
+        }
+      },
+      "terminal_failures": 0,
+      "macro_pct": 5.100603458766151
+    },
+    {
+      "split": "table2",
+      "model": "internvl3.5-8b",
+      "input": "v+asr",
+      "overall": {
+        "interactions": 1063,
+        "targets": 1313,
+        "hits": 64,
+        "percentage": 4.874333587204874
+      },
+      "by_task": {
+        "T1": {
+          "interactions": 200,
+          "targets": 200,
+          "hits": 58,
+          "percentage": 29.0
+        },
+        "T2": {
+          "interactions": 206,
+          "targets": 206,
+          "hits": 2,
+          "percentage": 0.970873786407767
+        },
+        "T3": {
+          "interactions": 207,
+          "targets": 207,
+          "hits": 0,
+          "percentage": 0.0
+        },
+        "T4": {
+          "interactions": 206,
+          "targets": 206,
+          "hits": 0,
+          "percentage": 0.0
+        },
+        "T6": {
+          "interactions": 37,
+          "targets": 37,
+          "hits": 2,
+          "percentage": 5.405405405405405
+        },
+        "T7": {
+          "interactions": 207,
+          "targets": 457,
+          "hits": 2,
+          "percentage": 0.437636761487965
+        }
+      },
+      "terminal_failures": 0,
+      "macro_pct": 5.968985992216855
+    },
+    {
+      "split": "table2",
+      "model": "livecc-7b",
+      "input": "v",
+      "overall": {
+        "interactions": 1063,
+        "targets": 1313,
+        "hits": 7,
+        "percentage": 0.5331302361005331
+      },
+      "by_task": {
+        "T1": {
+          "interactions": 200,
+          "targets": 200,
+          "hits": 0,
+          "percentage": 0.0
+        },
+        "T2": {
+          "interactions": 206,
+          "targets": 206,
+          "hits": 3,
+          "percentage": 1.4563106796116505
+        },
+        "T3": {
+          "interactions": 207,
+          "targets": 207,
+          "hits": 1,
+          "percentage": 0.4830917874396135
+        },
+        "T4": {
+          "interactions": 206,
+          "targets": 206,
+          "hits": 0,
+          "percentage": 0.0
+        },
+        "T6": {
+          "interactions": 37,
+          "targets": 37,
+          "hits": 0,
+          "percentage": 0.0
+        },
+        "T7": {
+          "interactions": 207,
+          "targets": 457,
+          "hits": 3,
+          "percentage": 0.6564551422319475
+        }
+      },
+      "terminal_failures": 0,
+      "macro_pct": 0.43264293488053523
+    },
+    {
+      "split": "table2",
+      "model": "minicpm-o",
+      "input": "va",
+      "overall": {
+        "interactions": 1063,
+        "targets": 1313,
+        "hits": 31,
+        "percentage": 2.361005331302361
+      },
+      "by_task": {
+        "T1": {
+          "interactions": 200,
+          "targets": 200,
+          "hits": 3,
+          "percentage": 1.5
+        },
+        "T2": {
+          "interactions": 206,
+          "targets": 206,
+          "hits": 17,
+          "percentage": 8.25242718446602
+        },
+        "T3": {
+          "interactions": 207,
+          "targets": 207,
+          "hits": 3,
+          "percentage": 1.4492753623188406
+        },
+        "T4": {
+          "interactions": 206,
+          "targets": 206,
+          "hits": 2,
+          "percentage": 0.970873786407767
+        },
+        "T6": {
+          "interactions": 37,
+          "targets": 37,
+          "hits": 1,
+          "percentage": 2.7027027027027026
+        },
+        "T7": {
+          "interactions": 207,
+          "targets": 457,
+          "hits": 5,
+          "percentage": 1.0940919037199124
+        }
+      },
+      "terminal_failures": 0,
+      "macro_pct": 2.661561823269207
+    },
+    {
+      "split": "table2",
+      "model": "mmduet2",
+      "input": "v",
+      "overall": {
+        "interactions": 1063,
+        "targets": 1313,
+        "hits": 19,
+        "percentage": 1.4470677837014472
+      },
+      "by_task": {
+        "T1": {
+          "interactions": 200,
+          "targets": 200,
+          "hits": 0,
+          "percentage": 0.0
+        },
+        "T2": {
+          "interactions": 206,
+          "targets": 206,
+          "hits": 7,
+          "percentage": 3.3980582524271843
+        },
+        "T3": {
+          "interactions": 207,
+          "targets": 207,
+          "hits": 2,
+          "percentage": 0.966183574879227
+        },
+        "T4": {
+          "interactions": 206,
+          "targets": 206,
+          "hits": 1,
+          "percentage": 0.4854368932038835
+        },
+        "T6": {
+          "interactions": 37,
+          "targets": 37,
+          "hits": 1,
+          "percentage": 2.7027027027027026
+        },
+        "T7": {
+          "interactions": 207,
+          "targets": 457,
+          "hits": 8,
+          "percentage": 1.75054704595186
+        }
+      },
+      "terminal_failures": 0,
+      "macro_pct": 1.550488078194143
+    },
+    {
+      "split": "table2",
+      "model": "moss-vl-realtime",
+      "input": "v",
+      "overall": {
+        "interactions": 1063,
+        "targets": 1313,
+        "hits": 68,
+        "percentage": 5.178979436405179
+      },
+      "by_task": {
+        "T1": {
+          "interactions": 200,
+          "targets": 200,
+          "hits": 3,
+          "percentage": 1.5
+        },
+        "T2": {
+          "interactions": 206,
+          "targets": 206,
+          "hits": 19,
+          "percentage": 9.223300970873787
+        },
+        "T3": {
+          "interactions": 207,
+          "targets": 207,
+          "hits": 4,
+          "percentage": 1.932367149758454
+        },
+        "T4": {
+          "interactions": 206,
+          "targets": 206,
+          "hits": 12,
+          "percentage": 5.825242718446602
+        },
+        "T6": {
+          "interactions": 37,
+          "targets": 37,
+          "hits": 3,
+          "percentage": 8.108108108108109
+        },
+        "T7": {
+          "interactions": 207,
+          "targets": 457,
+          "hits": 27,
+          "percentage": 5.908096280087527
+        }
+      },
+      "terminal_failures": 0,
+      "macro_pct": 5.416185871212413
+    },
+    {
+      "split": "table2",
+      "model": "aura",
+      "input": "v",
+      "overall": {
+        "interactions": 1063,
+        "targets": 1313,
+        "hits": 18,
+        "percentage": 1.3709063214013708
+      },
+      "by_task": {
+        "T1": {
+          "interactions": 200,
+          "targets": 200,
+          "hits": 0,
+          "percentage": 0.0
+        },
+        "T2": {
+          "interactions": 206,
+          "targets": 206,
+          "hits": 10,
+          "percentage": 4.854368932038835
+        },
+        "T3": {
+          "interactions": 207,
+          "targets": 207,
+          "hits": 1,
+          "percentage": 0.4830917874396135
+        },
+        "T4": {
+          "interactions": 206,
+          "targets": 206,
+          "hits": 3,
+          "percentage": 1.4563106796116505
+        },
+        "T6": {
+          "interactions": 37,
+          "targets": 37,
+          "hits": 1,
+          "percentage": 2.7027027027027026
+        },
+        "T7": {
+          "interactions": 207,
+          "targets": 457,
+          "hits": 3,
+          "percentage": 0.6564551422319475
+        }
+      },
+      "terminal_failures": 0,
+      "macro_pct": 1.6921548740041248
+    },
+    {
+      "split": "table3",
+      "model": "gemini-3.1-pro",
+      "input": "va",
+      "overall": {
+        "interactions": 299,
+        "targets": 360,
+        "hits": 167,
+        "percentage": 46.388888888888886
+      },
+      "by_task": {
+        "A": {
+          "interactions": 122,
+          "targets": 122,
+          "hits": 28,
+          "percentage": 22.950819672131146
+        },
+        "B": {
+          "interactions": 151,
+          "targets": 151,
+          "hits": 94,
+          "percentage": 62.25165562913907
+        },
+        "C": {
+          "interactions": 26,
+          "targets": 87,
+          "hits": 45,
+          "percentage": 51.724137931034484
+        }
+      },
+      "complete_c": {
+        "hits": 3,
+        "total": 26
+      },
+      "terminal_failures": 0
+    },
+    {
+      "split": "table3",
+      "model": "gemini-3.5-flash",
+      "input": "va",
+      "overall": {
+        "interactions": 299,
+        "targets": 360,
+        "hits": 148,
+        "percentage": 41.111111111111114
+      },
+      "by_task": {
+        "A": {
+          "interactions": 122,
+          "targets": 122,
+          "hits": 27,
+          "percentage": 22.131147540983605
+        },
+        "B": {
+          "interactions": 151,
+          "targets": 151,
+          "hits": 87,
+          "percentage": 57.615894039735096
+        },
+        "C": {
+          "interactions": 26,
+          "targets": 87,
+          "hits": 34,
+          "percentage": 39.08045977011494
+        }
+      },
+      "complete_c": {
+        "hits": 2,
+        "total": 26
+      },
+      "terminal_failures": 0
+    },
+    {
+      "split": "table3",
+      "model": "qwen3.5-omni-plus",
+      "input": "va",
+      "overall": {
+        "interactions": 299,
+        "targets": 360,
+        "hits": 112,
+        "percentage": 31.11111111111111
+      },
+      "by_task": {
+        "A": {
+          "interactions": 122,
+          "targets": 122,
+          "hits": 11,
+          "percentage": 9.01639344262295
+        },
+        "B": {
+          "interactions": 151,
+          "targets": 151,
+          "hits": 75,
+          "percentage": 49.66887417218543
+        },
+        "C": {
+          "interactions": 26,
+          "targets": 87,
+          "hits": 26,
+          "percentage": 29.885057471264368
+        }
+      },
+      "complete_c": {
+        "hits": 1,
+        "total": 26
+      },
+      "terminal_failures": 0
+    },
+    {
+      "split": "table3",
+      "model": "qwen3-vl-8b",
+      "input": "v+asr",
+      "overall": {
+        "interactions": 299,
+        "targets": 360,
+        "hits": 54,
+        "percentage": 15.0
+      },
+      "by_task": {
+        "A": {
+          "interactions": 122,
+          "targets": 122,
+          "hits": 3,
+          "percentage": 2.459016393442623
+        },
+        "B": {
+          "interactions": 151,
+          "targets": 151,
+          "hits": 37,
+          "percentage": 24.503311258278146
+        },
+        "C": {
+          "interactions": 26,
+          "targets": 87,
+          "hits": 14,
+          "percentage": 16.091954022988507
+        }
+      },
+      "complete_c": {
+        "hits": 0,
+        "total": 26
+      },
+      "terminal_failures": 0
+    },
+    {
+      "split": "table3",
+      "model": "internvl3.5-8b",
+      "input": "v+asr",
+      "overall": {
+        "interactions": 299,
+        "targets": 360,
+        "hits": 51,
+        "percentage": 14.166666666666666
+      },
+      "by_task": {
+        "A": {
+          "interactions": 122,
+          "targets": 122,
+          "hits": 0,
+          "percentage": 0.0
+        },
+        "B": {
+          "interactions": 151,
+          "targets": 151,
+          "hits": 40,
+          "percentage": 26.490066225165563
+        },
+        "C": {
+          "interactions": 26,
+          "targets": 87,
+          "hits": 11,
+          "percentage": 12.64367816091954
+        }
+      },
+      "complete_c": {
+        "hits": 0,
+        "total": 26
+      },
+      "terminal_failures": 0
+    },
+    {
+      "split": "table3",
+      "model": "qwen3-omni-30b-a3b",
+      "input": "va",
+      "overall": {
+        "interactions": 299,
+        "targets": 360,
+        "hits": 47,
+        "percentage": 13.055555555555555
+      },
+      "by_task": {
+        "A": {
+          "interactions": 122,
+          "targets": 122,
+          "hits": 3,
+          "percentage": 2.459016393442623
+        },
+        "B": {
+          "interactions": 151,
+          "targets": 151,
+          "hits": 39,
+          "percentage": 25.827814569536425
+        },
+        "C": {
+          "interactions": 26,
+          "targets": 87,
+          "hits": 5,
+          "percentage": 5.747126436781609
+        }
+      },
+      "complete_c": {
+        "hits": 0,
+        "total": 26
+      },
+      "terminal_failures": 0
+    },
+    {
+      "split": "table3",
+      "model": "qwen2.5-omni-7b",
+      "input": "va",
+      "overall": {
+        "interactions": 299,
+        "targets": 360,
+        "hits": 36,
+        "percentage": 10.0
+      },
+      "by_task": {
+        "A": {
+          "interactions": 122,
+          "targets": 122,
+          "hits": 3,
+          "percentage": 2.459016393442623
+        },
+        "B": {
+          "interactions": 151,
+          "targets": 151,
+          "hits": 30,
+          "percentage": 19.867549668874172
+        },
+        "C": {
+          "interactions": 26,
+          "targets": 87,
+          "hits": 3,
+          "percentage": 3.4482758620689653
+        }
+      },
+      "complete_c": {
+        "hits": 0,
+        "total": 26
+      },
+      "terminal_failures": 0
+    },
+    {
+      "split": "table3",
+      "model": "aura",
+      "input": "v",
+      "overall": {
+        "interactions": 299,
+        "targets": 360,
+        "hits": 25,
+        "percentage": 6.944444444444445
+      },
+      "by_task": {
+        "A": {
+          "interactions": 122,
+          "targets": 122,
+          "hits": 0,
+          "percentage": 0.0
+        },
+        "B": {
+          "interactions": 151,
+          "targets": 151,
+          "hits": 24,
+          "percentage": 15.894039735099337
+        },
+        "C": {
+          "interactions": 26,
+          "targets": 87,
+          "hits": 1,
+          "percentage": 1.1494252873563218
+        }
+      },
+      "complete_c": {
+        "hits": 0,
+        "total": 26
+      },
+      "terminal_failures": 0
+    },
+    {
+      "split": "table3",
+      "model": "livecc-7b",
+      "input": "v",
+      "overall": {
+        "interactions": 299,
+        "targets": 360,
+        "hits": 13,
+        "percentage": 3.611111111111111
+      },
+      "by_task": {
+        "A": {
+          "interactions": 122,
+          "targets": 122,
+          "hits": 0,
+          "percentage": 0.0
+        },
+        "B": {
+          "interactions": 151,
+          "targets": 151,
+          "hits": 13,
+          "percentage": 8.609271523178808
+        },
+        "C": {
+          "interactions": 26,
+          "targets": 87,
+          "hits": 0,
+          "percentage": 0.0
+        }
+      },
+      "complete_c": {
+        "hits": 0,
+        "total": 26
+      },
+      "terminal_failures": 0
+    },
+    {
+      "split": "table3",
+      "model": "moss-vl-realtime",
+      "input": "v",
+      "overall": {
+        "interactions": 299,
+        "targets": 360,
+        "hits": 12,
+        "percentage": 3.3333333333333335
+      },
+      "by_task": {
+        "A": {
+          "interactions": 122,
+          "targets": 122,
+          "hits": 0,
+          "percentage": 0.0
+        },
+        "B": {
+          "interactions": 151,
+          "targets": 151,
+          "hits": 11,
+          "percentage": 7.28476821192053
+        },
+        "C": {
+          "interactions": 26,
+          "targets": 87,
+          "hits": 1,
+          "percentage": 1.1494252873563218
+        }
+      },
+      "complete_c": {
+        "hits": 0,
+        "total": 26
+      },
+      "terminal_failures": 0
+    },
+    {
+      "split": "table3",
+      "model": "minicpm-o",
+      "input": "va",
+      "overall": {
+        "interactions": 299,
+        "targets": 360,
+        "hits": 11,
+        "percentage": 3.0555555555555554
+      },
+      "by_task": {
+        "A": {
+          "interactions": 122,
+          "targets": 122,
+          "hits": 0,
+          "percentage": 0.0
+        },
+        "B": {
+          "interactions": 151,
+          "targets": 151,
+          "hits": 11,
+          "percentage": 7.28476821192053
+        },
+        "C": {
+          "interactions": 26,
+          "targets": 87,
+          "hits": 0,
+          "percentage": 0.0
+        }
+      },
+      "complete_c": {
+        "hits": 0,
+        "total": 26
+      },
+      "terminal_failures": 0
+    },
+    {
+      "split": "table3",
+      "model": "mmduet2",
+      "input": "v",
+      "overall": {
+        "interactions": 299,
+        "targets": 360,
+        "hits": 7,
+        "percentage": 1.9444444444444444
+      },
+      "by_task": {
+        "A": {
+          "interactions": 122,
+          "targets": 122,
+          "hits": 0,
+          "percentage": 0.0
+        },
+        "B": {
+          "interactions": 151,
+          "targets": 151,
+          "hits": 7,
+          "percentage": 4.635761589403973
+        },
+        "C": {
+          "interactions": 26,
+          "targets": 87,
+          "hits": 0,
+          "percentage": 0.0
+        }
+      },
+      "complete_c": {
+        "hits": 0,
+        "total": 26
+      },
+      "terminal_failures": 0
+    }
+  ],
+  "separate_t5": {
+    "protocol": "Separate query-relative rolling diagnostic, excluded from every six-task Avg.",
+    "results": [
+      {
+        "model": "livecc-7b",
+        "interactions": 115,
+        "targets": 115,
+        "hits": 0,
+        "percentage": 0.0
+      },
+      {
+        "model": "aura",
+        "interactions": 115,
+        "targets": 115,
+        "hits": 0,
+        "percentage": 0.0
+      },
+      {
+        "model": "mmduet2",
+        "interactions": 115,
+        "targets": 115,
+        "hits": 0,
+        "percentage": 0.0
+      },
+      {
+        "model": "moss-vl-realtime",
+        "interactions": 115,
+        "targets": 115,
+        "hits": 1,
+        "percentage": 0.8695652173913043
+      },
+      {
+        "model": "minicpm-o",
+        "interactions": 115,
+        "targets": 115,
+        "hits": 2,
+        "percentage": 1.7391304347826086
+      }
+    ]
+  }
+}

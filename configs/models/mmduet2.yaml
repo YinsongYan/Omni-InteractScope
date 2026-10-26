@@ -1,0 +1,12 @@
+model: mmduet2
+input: v
+model_args:
+  model_path: wangyueqian/MMDuet2
+  device: cuda:0
+  max_new_tokens: 128
+  attn_implementation: flash_attention_2
+  max_context_tokens: 100000
+  two_phase: true
+  max_frames: 32
+  stride_sec: 2.0
+  recent_window_sec: 8.0

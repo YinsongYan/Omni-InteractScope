@@ -1,0 +1,10 @@
+model: moss-vl-realtime
+input: v
+model_args:
+  model_path: OpenMOSS-Team/MOSS-VL-Realtime
+  revision: 25e81cb952d5f353a5690f2c1ea09a725815df80
+  max_pixels: 151200
+  max_tokens_per_turn: 12
+  poll_timeout_sec: 0.25
+  poll_budget_sec: 1.0
+  final_budget_sec: 6.0

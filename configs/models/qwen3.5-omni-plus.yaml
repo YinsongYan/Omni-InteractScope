@@ -1,0 +1,16 @@
+model: qwen3.5-omni-plus
+input: va
+model_args:
+  api_model: qwen3.5-omni-plus
+  api_base: https://dashscope.aliyuncs.com/compatible-mode/v1
+  api_key_env: QWEN_OMNI_API_KEY
+  max_frames: 32
+  max_pixels: 151200
+  jpeg_quality: 85
+  temperature: 0.0
+  max_output_tokens: 2048
+  audio_bitrate: 32k
+  audio_part_style: input_audio
+  max_retries: 4
+  timeout: 180.0
+  rpm: 54

@@ -1,0 +1,5 @@
+transformers==4.57.1
+accelerate
+qwen-vl-utils
+torchcodec==0.7.0
+einops

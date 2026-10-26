@@ -1,0 +1,80 @@
+[
+  {
+    "interaction_id": "c1_event_notify_01",
+    "task_type": "forward_active_responding",
+    "sub_task_type": "event_onset_notify",
+    "query_type": "text",
+    "query_time": 0,
+    "query_text": "Tell me when someone walks into the room.",
+    "query_image": "",
+    "query_audio": "",
+    "video": "demo_c1_01.mp4",
+    "responses": [
+      {
+        "response_id": 1,
+        "notify_trigger_time": 10000,
+        "valid_response_window": null,
+        "trigger_type": "vision",
+        "trigger_reason": "A person appears at the doorway.",
+        "response_type": "text",
+        "assistant_reply_text": "Someone just walked into the room.",
+        "long_memory": "no",
+        "long_memory_start": null,
+        "source_language": "",
+        "target_language": ""
+      }
+    ]
+  },
+  {
+    "interaction_id": "c1_live_narration_01",
+    "task_type": "forward_active_responding",
+    "sub_task_type": "live_narration",
+    "query_type": "text",
+    "query_time": 0,
+    "query_text": "Narrate what happens in the cooking video.",
+    "query_image": "",
+    "query_audio": "",
+    "video": "demo_c1_02.mp4",
+    "responses": [
+      {
+        "response_id": 1,
+        "notify_trigger_time": null,
+        "valid_response_window": [8000, 16000],
+        "trigger_type": "vision",
+        "trigger_reason": "The chef chops vegetables and adds them to the pan.",
+        "response_type": "text",
+        "assistant_reply_text": "The chef is chopping vegetables and adding them into the hot pan.",
+        "long_memory": "no",
+        "long_memory_start": null,
+        "source_language": "",
+        "target_language": ""
+      }
+    ]
+  },
+  {
+    "interaction_id": "c1_counting_01",
+    "task_type": "forward_active_responding",
+    "sub_task_type": "counting",
+    "query_type": "text",
+    "query_time": 0,
+    "query_text": "How many cups are on the table when the guests sit down?",
+    "query_image": "",
+    "query_audio": "",
+    "video": "demo_c1_03.mp4",
+    "responses": [
+      {
+        "response_id": 1,
+        "notify_trigger_time": 12000,
+        "valid_response_window": null,
+        "trigger_type": "vision",
+        "trigger_reason": "Guests take their seats; cups are countable.",
+        "response_type": "text",
+        "assistant_reply_text": "There are 3 cups on the table.",
+        "long_memory": "no",
+        "long_memory_start": null,
+        "source_language": "",
+        "target_language": ""
+      }
+    ]
+  }
+]

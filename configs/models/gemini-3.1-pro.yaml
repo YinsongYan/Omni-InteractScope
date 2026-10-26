@@ -1,0 +1,12 @@
+model: gemini-3.1-pro
+input: va
+model_args:
+  api_model: gemini-3.1-pro-preview
+  max_frames: 32
+  max_pixels: 151200
+  media_resolution: MEDIA_RESOLUTION_LOW
+  jpeg_quality: 85
+  temperature: 0.0
+  max_output_tokens: 2048
+  audio_bitrate: 32k
+  base_url: https://generativelanguage.googleapis.com/v1beta/models

@@ -1,0 +1,6 @@
+transformers>=4.57,<5
+accelerate
+qwen-vl-utils
+qwen-omni-utils
+soundfile
+librosa

@@ -1,0 +1,80 @@
+[
+  {
+    "interaction_id": "c3_web_search_01",
+    "task_type": "proactive_tool_call",
+    "sub_task_type": "proactive_web_search",
+    "query_type": "text",
+    "query_time": 0,
+    "query_text": "Help me out if you need external info about what I'm looking at.",
+    "query_image": "",
+    "query_audio": "",
+    "video": "demo_c3_01.mp4",
+    "responses": [
+      {
+        "response_id": 1,
+        "notify_trigger_time": 7000,
+        "valid_response_window": null,
+        "trigger_type": "vision",
+        "trigger_reason": "An unfamiliar landmark comes into view.",
+        "response_type": "toolcall",
+        "assistant_reply_text": "<call:web_search>",
+        "long_memory": "no",
+        "long_memory_start": null,
+        "source_language": "",
+        "target_language": ""
+      }
+    ]
+  },
+  {
+    "interaction_id": "c3_generative_ui_01",
+    "task_type": "proactive_tool_call",
+    "sub_task_type": "generative_ui",
+    "query_type": "text_image",
+    "query_time": 0,
+    "query_text": "Show me product details when I focus on an item.",
+    "query_image": "ref_item.jpg",
+    "query_audio": "",
+    "video": "demo_c3_02.mp4",
+    "responses": [
+      {
+        "response_id": 1,
+        "notify_trigger_time": 6000,
+        "valid_response_window": null,
+        "trigger_type": "vision",
+        "trigger_reason": "User lingers on a specific product.",
+        "response_type": "multimodal",
+        "assistant_reply_text": "<ui:product_card>Here is the info for the Chanel loose powder.",
+        "long_memory": "no",
+        "long_memory_start": null,
+        "source_language": "",
+        "target_language": ""
+      }
+    ]
+  },
+  {
+    "interaction_id": "c3_audio_query_tool_01",
+    "task_type": "proactive_tool_call",
+    "sub_task_type": "proactive_tool_use",
+    "query_type": "audio",
+    "query_time": 1000,
+    "query_text": "",
+    "query_image": "",
+    "query_audio": "remind_weather.wav",
+    "video": "demo_c3_03.mp4",
+    "responses": [
+      {
+        "response_id": 1,
+        "notify_trigger_time": 8000,
+        "valid_response_window": null,
+        "trigger_type": "vision",
+        "trigger_reason": "User is heading toward the door to leave.",
+        "response_type": "multimodal",
+        "assistant_reply_text": "<call:weather_fetch>It may rain this morning, take an umbrella.",
+        "long_memory": "no",
+        "long_memory_start": null,
+        "source_language": "",
+        "target_language": ""
+      }
+    ]
+  }
+]

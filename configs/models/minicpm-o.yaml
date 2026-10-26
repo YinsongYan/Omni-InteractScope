@@ -1,0 +1,15 @@
+model: minicpm-o
+input: va
+model_args:
+  model_path: openbmb/MiniCPM-o-4_5
+  revision: 503e754207c94da6bb26850b4469f367c9ea3582
+  device: cuda:0
+  max_new_tokens: 512
+  use_audio: true
+  stream_window_units: 30
+  stream_max_speak_tokens: 20
+  decode_mode: greedy
+  stream_temperature: 0.1
+  max_frames: 32
+  stride_sec: 2.0
+  recent_window_sec: 8.0

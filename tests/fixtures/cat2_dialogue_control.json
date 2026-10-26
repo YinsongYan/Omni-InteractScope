@@ -1,0 +1,56 @@
+[
+  {
+    "interaction_id": "c2_turn_taking_noise_01",
+    "task_type": "dialogue_control",
+    "sub_task_type": "proactive_turn_taking",
+    "query_type": "text",
+    "query_time": 0,
+    "query_text": "Let me know if I should do anything.",
+    "query_image": "",
+    "query_audio": "",
+    "video": "demo_c2_01.mp4",
+    "responses": [
+      {
+        "response_id": 1,
+        "notify_trigger_time": 9000,
+        "valid_response_window": null,
+        "trigger_type": "audio",
+        "trigger_reason": "User mutters a self-directed noise statement that needs no reply.",
+        "response_type": "text",
+        "assistant_reply_text": "",
+        "long_memory": "no",
+        "long_memory_start": null,
+        "expected_behavior": "silence",
+        "source_language": "",
+        "target_language": ""
+      }
+    ]
+  },
+  {
+    "interaction_id": "c2_interjection_01",
+    "task_type": "dialogue_control",
+    "sub_task_type": "verbal_visual_interjection",
+    "query_type": "text",
+    "query_time": 0,
+    "query_text": "Interrupt me if I make a mistake while assembling this.",
+    "query_image": "",
+    "query_audio": "",
+    "video": "demo_c2_02.mp4",
+    "responses": [
+      {
+        "response_id": 1,
+        "notify_trigger_time": 6000,
+        "valid_response_window": null,
+        "trigger_type": "vision",
+        "trigger_reason": "User inserts the part backwards.",
+        "response_type": "text",
+        "assistant_reply_text": "Hold on — that piece is going in backwards.",
+        "long_memory": "no",
+        "long_memory_start": null,
+        "expected_behavior": "respond",
+        "source_language": "",
+        "target_language": ""
+      }
+    ]
+  }
+]

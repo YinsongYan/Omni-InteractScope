@@ -1,0 +1,16 @@
+model: livecc-7b
+input: v
+model_args:
+  model_path: chenjoya/LiveCC-7B-Instruct
+  revision: dbe7415c5d2024c3e2d7f898ecbc58fd9fc8da2f
+  device: cuda:0
+  max_new_tokens: 128
+  attn_implementation: flash_attention_2
+  max_pixels: 151200
+  max_context_tokens: 28000
+  repetition_penalty: 1.05
+  temperature: 0.0
+  two_phase: false
+  max_frames: 32
+  stride_sec: 2.0
+  recent_window_sec: 8.0

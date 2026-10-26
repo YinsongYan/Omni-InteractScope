@@ -1,0 +1,1 @@
+"""Omni-InteractScope benchmark evaluation."""
