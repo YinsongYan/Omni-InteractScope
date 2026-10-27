@@ -7,6 +7,7 @@
 <p align="center"><strong>Benchmarking Proactive and Agentic Interaction in Continuous Omnimodal Streams</strong></p>
 
 <p align="center">
+  <a href="https://arxiv.org/abs/2610.35439v1"><img alt="Paper on arXiv" src="https://img.shields.io/badge/Paper-arXiv-b31b1b?style=for-the-badge&amp;logo=arxiv&amp;logoColor=white"></a>
   <a href="https://yinsongyan.github.io/Omni-InteractScope/"><img alt="Project page" src="https://img.shields.io/badge/Project-Page-225DB7?style=for-the-badge"></a>
   <a href="https://huggingface.co/datasets/Darden7/Omni-InteractScope"><img alt="Dataset on Hugging Face" src="https://img.shields.io/badge/Dataset-Hugging%20Face-FFD21E?style=for-the-badge&amp;logo=huggingface&amp;logoColor=black"></a>
   <a href="#get-the-code-and-data"><img alt="Get started" src="https://img.shields.io/badge/Quick%20Start-Get%20Started-25AFA8?style=for-the-badge"></a>
